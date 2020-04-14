@@ -24,20 +24,20 @@ public class Post {
 	private String titulo;
 	
 	@NotBlank
-	private String auto;
+	private String autor;
 	
 	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "dd-mm-yyyy")
 	private LocalDate data;
 	
 	@NotBlank
 	@Lob
-	private String text;
+	private String texto;
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -49,12 +49,12 @@ public class Post {
 		this.titulo = titulo;
 	}
 
-	public String getAuto() {
-		return auto;
+	public String getAutor() {
+		return autor;
 	}
 
-	public void setAuto(String auto) {
-		this.auto = auto;
+	public void setAutor(String autor) {
+		this.autor = autor;
 	}
 
 	public LocalDate getData() {
@@ -65,11 +65,11 @@ public class Post {
 		this.data = data;
 	}
 
-	public String getText() {
-		return text;
+	public String getTexto() {
+		return texto;
 	}
 
-	public void setText(String text) {
-		this.text = text;
+	public void setTexto(String texto) {
+		this.texto = texto;
 	}
 }
