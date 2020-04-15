@@ -19,7 +19,7 @@ public class DemoblogController {
 	private DemoblogService demoblogService;
 	
 	@RequestMapping(value="/posts", method=RequestMethod.GET)
-	public ModelAndView getPots() {
+	public ModelAndView getPosts() {
 		ModelAndView mv = new ModelAndView("posts");
 		List<Post> posts = this.demoblogService.findAll();
 		mv.addObject("posts", posts);
@@ -27,7 +27,7 @@ public class DemoblogController {
 	}
 	
 	@RequestMapping(value="/posts/{id}", method=RequestMethod.GET)
-	public ModelAndView getPotDetails(@PathVariable("id") long id) {
+	public ModelAndView getPostDetails(@PathVariable("id") long id) {
 		ModelAndView mv = new ModelAndView("postDetails");
 		Post post = this.demoblogService.findById(id);
 		mv.addObject("post", post);
